@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: llm-quiz-solver
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: QUIZ_SECRET
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: MY_EMAIL
+        sync: false
+      - key: PORT
+        value: 8000

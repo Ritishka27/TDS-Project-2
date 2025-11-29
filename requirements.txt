@@ -1,6 +1,12 @@
 fastapi
 uvicorn[standard]
-fastapi
-uvicorn[standard]
 playwright
 pdfplumber
+httpx
+openai
+pydantic
+matplotlib
+numpy
+pandas
+pillow
+python-multipart
