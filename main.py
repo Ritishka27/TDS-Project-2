@@ -5,6 +5,7 @@ from playwright.async_api import async_playwright
 import pdfplumber
 import requests
 import tempfile
+from fastapi import FastAPI
 
 # -------------------------------------
 # SETTINGS
@@ -21,7 +22,11 @@ class QuizRequest(BaseModel):
     email: str
     secret: str
     url: str
+app = FastAPI()
 
+@app.get("/")
+def read_root():
+    return {"message": "FastAPI is running. Try /docs for the interactive API docs."}
 
 # -------------------------------------
 # MAIN ENDPOINT
